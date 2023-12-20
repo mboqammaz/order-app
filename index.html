@@ -1,0 +1,94 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <div class="header-container">
+                <h1 >Blue's Diner</h1>
+                <h3>The best burgers and pizzas in town.</h3>
+            </div>
+        </header>
+
+        <section class="restaurantMenu" id="restaurant-menu">
+            <div class="items" id="menu-items">
+                <!-- Menu Items go here -->
+
+        </section>
+
+        <section id="order-details">
+            <div class="checkout">
+                <div class="order-title">
+                    <h1>Your Order</h1>
+                </div>
+
+                <div id="checkout-list">
+                    <!-- added items go here -->
+                </div>
+
+                <hr class="solid">
+
+                <div class="total-price">
+                    <h2>Total price</h2>
+                    <h3 id="sub-total"></h3>
+                </div>
+
+                <button id="complete-order">
+                    <p>Complete Order</p>
+                </button>
+
+            </div>
+        </section>
+
+        <div id="card-popup">
+                <div class="close-card-popup">
+                    <button class="close-btn" id="close-btn">X</button>
+                </div>
+
+                <div class="popup-inner">
+                    <h2>Enter card details </h2>
+
+                    <form id="card-details">
+                        <input
+                            type="name"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your name"
+                            aria-label="Full name"
+                            required>
+                        <input
+                            type="number"
+                            id="cardNumber"
+                            name="cardNumber"
+                            placeholder="Enter card number"
+                            aria-label="Card number"
+                            required>
+                        <input 
+                            type="number"
+                            id="cardCvv"
+                            name="cardCvv"
+                            placeholder="CVV"
+                            aria-label="CVV"
+                            required>
+                            
+                            <div class="popup-pay-btn" id="popup-pay-btn">
+                                <button id="pay-btn" type="submit">Pay</button>
+                            </div>
+                    </form>
+                    
+                </div>
+        </div>
+
+	<script src="script.js" type="module"></script>
+    </body>
+
+
+</html>
+

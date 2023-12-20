@@ -1,0 +1,364 @@
+html, body {
+    margin: 0;
+    width: 600px;
+    height: 1161px;
+}
+
+.header-container {
+    margin: 0 auto;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Clips any content that overflows the header */
+
+    background-image: url(images/appHeader.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.restaurantMenu {
+    /* border:  green solid 2px; */
+    width: 508px;
+    margin: 45px auto;
+}
+
+.item-section {
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-details {
+    position: absolute;
+    left: 150px;
+    width: 0;
+}
+
+.divider {
+    width: 504px;
+    height: 1px;
+
+    margin: 50px 0 50px 0;
+
+    border: 1px solid grey;
+}
+
+#order-details {
+    display: none;
+    width: 508px;
+    height: 319px;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.order-title {
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+
+
+/* typography */
+
+h1 {
+    color: #000;
+    font-family: Smythe;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px; /* 60% */
+}
+
+.header-container h1 {
+    margin: 20px 0 20px 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Smythe;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    position: absolute;
+    z-index: 100;
+    left: 50px;
+    top: 45px;
+}
+
+h2 {
+    margin: 0;
+    color: #000;
+    font-family: Smythe;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px; /* 60% */
+}
+
+
+h3 {
+    margin: 0px;
+    color: #000;
+    font-family: Smythe;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+}
+
+.header-container h3 {
+    color: #FFF;
+    font-family: Smythe;
+    font-size: 22.422px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    position: absolute;
+    z-index: 100;
+    left: 50px;
+    top: 100px;
+}
+
+
+h4 {
+    margin: 8px 0 8px 0;
+    color: #8B8B8B;
+    font-family: Smythe;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+    width: 358px;
+}
+
+
+.item-img p {
+
+    margin: 0;
+    padding: 0;
+}
+
+#add-btn p {
+    width: 27px;
+    height: 28.5px;
+    flex-shrink: 0;
+
+    color: #3C3C3C;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 24px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+#complete-order p {
+    color: var(--white, #FFF);
+    font-family: Verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+
+    white-space: nowrap;
+}
+
+
+/* Buttons */
+
+#add-btn {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+#complete-order {
+    display: flex;
+    width: 508px;
+    padding: 18px 175px 18px 194px;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    border-radius: 3px;
+    background: #16DB99;
+    border: #16DB99;
+
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+
+/* images */
+
+.header-img {
+    width: 600px;
+    height: 400px;
+    /* margin: -153px 0 -80px 0; */
+}
+
+.item-img {
+    display: flex;
+    width: 70px;
+    height: 89px;
+    justify-content: center;
+    flex-shrink: 0;
+
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 78.72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 98.4px; /* 125% */
+    letter-spacing: -1.574px;
+}
+
+.elipse {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    stroke-width: 1.5px;
+    stroke: #DEDEDE;
+}
+
+hr.solid {
+    border-top: solid 3px #bbb;
+    margin-bottom: 50px;
+}
+
+
+/* popup */
+
+#card-popup {
+    display: none;
+    position: fixed;
+
+    /* Bottom part is to center the window */
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    height: 542px;
+    width: 524px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: #fff;
+}
+
+.close-card-popup {
+    margin: 10px;
+    text-align: right;
+}
+
+.close-btn {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.popup-inner {
+    width: 474px;
+    margin: 0 auto;
+}
+
+.popup-inner h2 {
+    color: #000;
+    font-family: Verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31.119px; /* 129.664% */
+    margin-top: 30px;
+}
+
+input {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 3.89px;
+    border: 1.297px solid #757575;
+    width: 475.911px;
+    height: 71.304px;
+    flex-shrink: 0;
+}
+
+.popup-pay-btn {
+    display: flex;
+    justify-content: center;
+}
+
+#pay-btn {
+    width: 508px;
+    padding: 18px 175px 18px 194px;
+    background-color: #16DB99;
+    border: transparent;
+    border-radius: 3px;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+    /* button text */
+    color: var(--white, #FFF);
+    font-family: Verdana;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31.119px; /* 155.596% */
+}
+
+/* checkout list */
+
+.selected-item {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.remove-btn {
+    display: block;
+    width: 77px;
+    flex-shrink: 0;
+
+    color: #BBB;
+    font-family: Verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    border: transparent;
+    background-color: transparent;
+
+    margin-right: auto;
+
+    cursor: pointer;
+}
